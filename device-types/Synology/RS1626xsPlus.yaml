@@ -1,0 +1,79 @@
+manufacturer: Synology
+model: RS1626xs+
+slug: synology-rs1626xs-plus
+part_number: RS1626xs+
+u_height: 1
+is_full_depth: true
+weight: 9.5
+weight_unit: kg
+airflow: front-to-rear
+comments: |
+  Synology RackStation RS1626xs+.<br />
+  CPU: Intel Xeon D-1726 (6C/12T, 2.9/3.5 GHz)<br />
+  RAM: 16 GB DDR4 ECC RDIMM installed, 64 GB max.<br />
+  4x LFF SATA bays + 2x M.2 2280 NVMe slots.<br />
+  Dual integrated 10GbE RJ45.<br />
+  1x dedicated out-of-band management port.<br />
+  Redundant 250W PSUs.<br />
+
+interfaces:
+  - name: LAN1
+    type: 10gbase-t
+    mgmt_only: false
+  - name: LAN2
+    type: 10gbase-t
+    mgmt_only: false
+  - name: OOB-MGMT
+    type: 1000base-t
+    mgmt_only: true
+
+default_power_ports:
+  - name: PSU1
+    type: iec-60320-c14
+  - name: PSU2
+    type: iec-60320-c14
+
+module_bays:
+  - name: PCIe Slot 1
+    position: Rear
+    description: PCIe Gen4 x8 expansion slot for NIC/HBA
+
+rear_ports:
+  - name: USB-A1
+    type: usb-a
+  - name: USB-A2
+    type: usb-a
+  - name: Expansion
+    type: other
+    description: Mini-SAS HD expansion port
+
+device_bays:
+  - name: Bay1
+  - name: Bay2
+  - name: Bay3
+  - name: Bay4
+
+inventory_items:
+  - name: CPU
+    manufacturer: Intel
+    part_id: Xeon D-1726
+    label: Embedded CPU
+  - name: Memory
+    manufacturer: Synology
+    part_id: 16GB DDR4 ECC RDIMM
+  - name: NVMe Slot 1
+    label: M.2 2280 NVMe
+  - name: NVMe Slot 2
+    label: M.2 2280 NVMe
+  - name: Fan1
+  - name: Fan2
+  - name: Fan3
+  - name: Fan4
+  - name: PSU1
+  - name: PSU2
+
+console-ports: []
+console-server-ports: []
+power-outlets: []
+front-ports: []
+rear-ports: []
